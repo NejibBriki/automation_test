@@ -1,3 +1,4 @@
+
 package com.e2eTests.automation.utils;
 
 import org.openqa.selenium.OutputType;

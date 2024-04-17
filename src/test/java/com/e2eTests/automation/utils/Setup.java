@@ -29,7 +29,7 @@ public class Setup {
 	@Before
 	public void setWebDriver(Scenario scenario) {
 
-		LOGGER.error("Scenario: " + scenario.getName() + "- started");
+		LOGGER.error("Scenario: "  + scenario.getName() + "- started");
 		String browser = System.getProperty("browser");
 		if (browser == null) {
 
@@ -41,7 +41,8 @@ public class Setup {
 		case "chrome":
 
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.addArguments("['start-maximized']");
+			
+			chromeOptions.addArguments("--start-maximized");
 			driver = new ChromeDriver(chromeOptions);
 			break;
 
@@ -50,7 +51,7 @@ public class Setup {
 			firefoxOptions.setCapability("platform", Platform.WIN10);
 			driver = new FirefoxDriver(firefoxOptions);
 			break;
-
+			
 		case "edge":
 			driver = new EdgeDriver();
 			break;
@@ -65,7 +66,7 @@ public class Setup {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-
+	
 	public static Logger getLogger() {
 		return LOGGER;
 	}
