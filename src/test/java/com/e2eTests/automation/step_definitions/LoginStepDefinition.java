@@ -33,7 +33,7 @@ public class LoginStepDefinition {
 	}
 
 	@When("Je saisis le login {string}")
-	public void jeSaisisLeLogin(String s) {
+	public void jeSaisisLeLogin(String login) {
 		LoginPage.getPassword().clear();
 		LoginPage.getPassword().sendKeys(login);
 	}
