@@ -1,6 +1,6 @@
 package com.e2eTests.automation.step_definitions;
 
-import com.e2eTests.automation.page_objects.LoginPage;
+
 import com.e2eTests.automation.page_objects.ProductNamePage;
 
 import io.cucumber.java.en.When;
